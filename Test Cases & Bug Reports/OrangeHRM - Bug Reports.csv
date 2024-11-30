@@ -1,0 +1,9 @@
+Bug Reports,,,,,,,,,,,,
+SL No.,Test Case ID,Bug ID,Module,Summary,Test Data,Steps to Reproduce,Actual Result,Expected Result,Severity,Priority,Environment,Attachments
+1,TC_02 (Login Page),BUG_01 (Login Page),Login Page,System allows login with an invalid username.,"1. Url: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2. Invalid Username: admin
+3. Valid Password: admin123","1. Open Chrome browser
+2. Enter URL
+3. Enter an invalid username
+4. Enter a valid password
+5. Click ""Login""",User logged in successfully despite invalid username.,"User should fail to log in, and an error message: ""Invalid credentials"" should be displayed.",Major,P1,"Chrome, Windows 10",Video Link

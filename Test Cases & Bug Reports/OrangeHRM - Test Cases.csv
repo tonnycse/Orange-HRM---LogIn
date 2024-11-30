@@ -1,0 +1,82 @@
+Test Cases,,,,,,,,,
+SL No.,Test Scenario ID,Test Case ID,Test Case Description,Precondition,Test Steps,Test Data,Actual Result,Expected Result,Status
+1,TS_01 (Login Page),TC_01 (Login Page),Verify if a user can log in using valid username and valid password.,User on login page,"1. Open Chrome browser.
+2. Enter URL.
+3. Enter valid username.
+4. Enter valid password.
+5. Click ""Login"".","1. Url: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2. Valid Username: Admin
+3. Valid Password: admin123",Logged in successfully,User should login successfully.,Passed
+2,TS_01 (Login Page),TC_02 (Login Page),Verify if a user can log in using invalid username and valid password.,User on login page,"1. Open Chrome browser
+2. Enter URL
+3. Enter an invalid username
+4. Enter a valid password
+5. Click ""Login""","1. Url: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2. Invalid Username: admin
+3. Valid Password: admin123",Logged in successfully,"User will fail to log in and an error message: ""Invalid credentials"" will be displayed.",Failed
+3,TS_01 (Login Page),TC_03 (Login Page),Verify if a user can log in using valid username and invalid password.,User on login page,"1. Open Chrome browser
+2. Enter URL
+3. Enter a valid username
+4. Enter an invalid password
+5. Click ""Login""","1. Url: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2. Valid Username: Admin
+3. Valid Password: admin12345","Login failed, and an error message ""Invalid credentials"" was displayed.","User will fail to log in and an error message: ""Invalid credentials"" will be displayed.",Passed
+4,TS_01 (Login Page),TC_04 (Login Page),Verify if a user can log in using invalid username and invalid password.,User on login page,"1. Open Chrome browser
+2. Enter URL
+3. Enter an invalid username
+4. Enter an invalid password
+5. Click ""Login""","1. Url: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2. Valid Username: admin
+3. Valid Password: admin12345","Login failed, and an error message ""Invalid credentials"" was displayed.","User will fail to log in and an error message: ""Invalid credentials"" will be displayed.",Passed
+5,TS_01 (Login Page),TC_05 (Login Page),Verify if a user can log in with valid username and blank password.,User on login page,"1. Open Chrome browser
+2. Enter URL
+3. Enter a valid username
+4. Leave the password field blank
+5. Click ""Login""","1. Url: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2. Valid Username: Admin
+","Login failed, and an error message ""Required"" was displayed below the Password field.","The Login button will be disabled, and a ""Required"" error message will appear below the Password field.",Passed
+6,TS_01 (Login Page),TC_06 (Login Page),Verify if a user can log in with blank username and valid password.,User on login page,"1. Open Chrome browser
+2. Enter URL
+3. Leave the username field blank
+4. Enter a valid password
+5. Click ""Login""","1. Url: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2. Valid Password: admin123
+","Login failed, and an error message ""Required"" was displayed below the Username field.","The Login button will be disabled, and a ""Required"" error message will appear below the Username field.",Passed
+7,TS_01 (Login Page),TC_07 (Login Page),Verify if a user can log in with invalid username and blank password.,User on login page,"1. Open Chrome browser
+2. Enter URL
+3. Enter an invalid username
+4. Leave the password field blank
+5. Click ""Login""","1. Url: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2. Invalid Username: admin
+","Login failed, and an error message ""Required"" was displayed below the Password field.","The Login button will be disabled, and a ""Required"" error message will appear below the Password field.",Passed
+8,TS_01 (Login Page),TC_08 (Login Page),Verify if a user can log in with blank username and invalid password.,User on login page,"1. Open Chrome browser
+2. Enter URL
+3. Leave the username field blank
+4. Enter an invalid password
+5. Click ""Login""","1. Url: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2. Invalid Password: admin12345
+","Login failed, and an error message ""Required"" was displayed below the Username field.","The Login button will be disabled, and a ""Required"" error message will appear below the Username field.",Passed
+9,TS_01 (Login Page),TC_09 (Login Page),Verify if a user can log in with blank username and blank password,User on login page,"1. Open Chrome browser
+2. Enter URL
+3. Leave the username field blank
+4. Leave the password field blank
+5. Click ""Login""","1. Url: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+","Login failed, and an error message ""Required"" was displayed below the Username & Password fields.","The Login button will be disabled, and a ""Required"" error message will appear below Username & Password fields.",Passed
+10,TS_02 (Apply Leave),TC_10 (Apply Leave),Verify if a user can apply for leave with valid information,User on apply leave page,"1. Open Chrome browser
+2. Enter URL
+3. Login to Orange HRM
+4. Go to Leave Menu
+5. Select Apply
+6. Select Valid Leave Type
+7. Select Valid Date (From & To)
+8. Select Valid Duration
+9. Write Valid Comment
+10. Click on ""Apply""","1. Url: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2. Valid Username: Admin
+3. Valid Password: admin123
+4. Leave Type: CAN-FMLA
+5. Date: 2024-29-11 
+6. Duration: Full Day
+7. Comments: Personal","A success message appears:
+""Successfully Saved.""","A success message ""Successfully Saved"".will appear:
+",Passed

@@ -1,0 +1,8 @@
+Decision Table,,,,,,,,,,
+,,,,,,,,,,
+Login Page,Fields,TC_01,TC_02,TC_03,TC_04,TC_05,TC_06,TC_07,TC_08,TC_09
+,,,,,,,,,,
+,Username,Valid,Invalid,Valid,Invalid,Valid,Blank,Invalid,Blank,Blank
+,Password,Valid,Valid,Invalid,Invalid,Blank,Valid,Blank,Invalid,Blank
+,,,,,,,,,,
+,Outcomes,Valid,Invalid,Invalid,Invalid,Invalid,Invalid,Invalid,Invalid,Invalid
