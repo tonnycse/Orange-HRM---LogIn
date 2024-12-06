@@ -14,85 +14,107 @@ test.beforeEach(async ({ page }) => {
 });
 
 test("Valid Username & Valid Password", async () => {
+
     await loginPage.fillUsername(process.env.validuserid!);
     await loginPage.fillPassword(process.env.validpassword!);
+
+    // Click login button
     const homePage = await loginPage.clickLoginButton();
+
     await homePage.expectDashboardTextToBeVisible();
   });
 
-//   
-// test("Invalid Username & Valid Password", async () => {
-//     test.fail(true); // Mark this test as expected to fail
-//     await loginPage.fillUsername(process.env.invaliduserid!);
-//     await loginPage.fillPassword(process.env.validpassword!);
+test("Invalid Username & Valid Password", async () => {
+
+    test.fail(true); // Mark this test as expected to fail
+    await loginPage.fillUsername(process.env.invaliduserid!);
+    await loginPage.fillPassword(process.env.validpassword!);
   
-//     // Click login button
-//     await loginPage.clickLoginButton();
+    // Click login button
+    await loginPage.clickLoginButton();
   
-//     // Check if error message is visible
-//     await loginPage.expectErrorMessageToBeVisible();
-// });
+    await loginPage.expectErrorMessageToBeVisible();
+});
   
 
-// test("Valid Username & Invalid Password", async () => {
-//     await loginPage.fillUsername(process.env.validuserid!);
-//     await loginPage.fillPassword(process.env.invalidpassword!);
+test("Valid Username & Invalid Password", async () => {
 
-//     await loginPage.clickLoginButton();
-//     await loginPage.expectErrorMessageToBeVisible();
-// });
+    await loginPage.fillUsername(process.env.validuserid!);
+    await loginPage.fillPassword(process.env.invalidpassword!);
 
-// test("Invalid Username & Invalid Password", async () => {
-//     await loginPage.fillUsername(process.env.invaliduserid!);
-//     await loginPage.fillPassword(process.env.invalidpassword!);
+    // Click login button
+    await loginPage.clickLoginButton();
 
-//     await loginPage.clickLoginButton();
-//     await loginPage.expectErrorMessageToBeVisible();
-// });
+    await loginPage.expectErrorMessageToBeVisible();
+});
 
-// test("Valid Username & Blank Password", async () => {
-//     await loginPage.fillUsername(process.env.validuserid!);
-//     // Do not fill the password field
+test("Invalid Username & Invalid Password", async () => {
 
-//     await loginPage.clickLoginButton();
-//     await loginPage.expectErrorMessageRequiredToBeVisible();
-// });
+    await loginPage.fillUsername(process.env.invaliduserid!);
+    await loginPage.fillPassword(process.env.invalidpassword!);
 
-//   test("Blank Username & Valid Password", async () => {
-//     // Do not fill the username field
-//     await loginPage.fillPassword(process.env.validpassword!);
+    // Click login button
+    await loginPage.clickLoginButton();
 
-//     await loginPage.clickLoginButton();
-//     await loginPage.expectErrorMessageRequiredToBeVisible();
-//   });
+    await loginPage.expectErrorMessageToBeVisible();
+});
 
-//   test("Invalid Username & Blank Password", async () => {
-//     await loginPage.fillUsername(process.env.invaliduserid!);
-//     // Do not fill the password field
+test("Valid Username & Blank Password", async () => {
 
-//     await loginPage.clickLoginButton();
-//     await loginPage.expectErrorMessageRequiredToBeVisible();
-//   });
+    await loginPage.fillUsername(process.env.validuserid!);
+    // Do not fill the password field
 
-//   test("Blank Username & Invalid Password", async () => {
-//     // Do not fill the username field
-//     await loginPage.fillPassword(process.env.invalidpassword!);
+    // Click login button
+    await loginPage.clickLoginButton();
 
-//     await loginPage.clickLoginButton();
-//     await loginPage.expectErrorMessageRequiredToBeVisible();
-//   });
+    await loginPage.expectErrorMessageRequiredToBeVisible();
+});
 
-// test("Blank Username & Blank Password", async ({ page }) => {
-//     await loginPage.clickLoginButton();
+  test("Blank Username & Valid Password", async () => {
 
-//     // Get both error messages with 'Required' text
-//     const errorMessages = page.locator('text=Required');
+    // Do not fill the username field
+    await loginPage.fillPassword(process.env.validpassword!);
 
-//     // Check if the first error message is visible
-//     await expect(errorMessages.first()).toBeVisible({ timeout: 15000 });
+    // Click login button
+    await loginPage.clickLoginButton();
 
-//     // Check if the second error message is visible
-//     await expect(errorMessages.nth(1)).toBeVisible({ timeout: 15000 });
-// });
+    await loginPage.expectErrorMessageRequiredToBeVisible();
+  });
+
+  test("Invalid Username & Blank Password", async () => {
+
+    await loginPage.fillUsername(process.env.invaliduserid!);
+    // Do not fill the password field
+
+    // Click login button
+    await loginPage.clickLoginButton();
+
+    await loginPage.expectErrorMessageRequiredToBeVisible();
+  });
+
+  test("Blank Username & Invalid Password", async () => {
+
+    // Do not fill the username field
+    await loginPage.fillPassword(process.env.invalidpassword!);
+
+    // Click login button
+    await loginPage.clickLoginButton();
+
+    await loginPage.expectErrorMessageRequiredToBeVisible();
+  });
+
+test("Blank Username & Blank Password", async ({ page }) => {
+
+    await loginPage.clickLoginButton();
+
+    // Get both error messages with 'Required' text
+    const errorMessages = page.locator('text=Required');
+
+    // Check if the first error message is visible
+    await expect(errorMessages.first()).toBeVisible({ timeout: 15000 });
+
+    // Check if the second error message is visible
+    await expect(errorMessages.nth(1)).toBeVisible({ timeout: 15000 });
+});
 
 });
