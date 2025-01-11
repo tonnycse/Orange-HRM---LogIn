@@ -9,8 +9,6 @@ Project Folder
 ├── node_modules
 
 └── src
-
-       ├── api
        
        ├── config
        
