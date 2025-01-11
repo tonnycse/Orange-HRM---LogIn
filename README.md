@@ -60,17 +60,9 @@ Project Folder
 
 - Source code directory containing project files.
 
-### api
-
-- Directory for API-related scripts.
-
 ### config
 
 - Directory containing environment configuration files and authentication data.
-
-### fixtures
-
-- Directory for test fixtures, such as reusable functions for login.
 
 ### pages
 
@@ -83,10 +75,6 @@ Project Folder
 ### tests
 
 - Directory for test scripts written in TypeScript.
-
-### utils
-
-- Directory for utility scripts used in testing, such as encryption and logging utilities.
 
 ### test-results
 
