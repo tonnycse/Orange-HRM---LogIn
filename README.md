@@ -5,23 +5,41 @@ This repository contains a Playwright framework setup for automated testing. The
 ### Project Folder Structure
 
 Project Folder
+
 ├── node_modules
+
 └── src
+
        ├── api
+       
        ├── config
+       
        ├── pages
+       
        ├── testdata
+       
        └── tests
+       
 ├─ playwright-report
+
 │ .eslintrc.json
+
 │ readme.md
+
 │ .gitignore
+
 │ package-lock.json
+
 │ package.json
+
 │ playwright.config.ts
+
 │ tsconfig.json
+
 ├─ .github
+
 │        └── workflows
+
 │                 └── main.yml
 
 ### Description
