@@ -1,120 +1,96 @@
-Playwright Framework
+### Playwright Framework
 
-This repository contains a Playwright framework setup for automated testing, designed for seamless, efficient, and scalable test execution.
+This repository contains a Playwright framework setup for automated testing. The framework is structured as follows:
 
-Project Folder Structure
+### Project Folder Structure
 
 Project Folder
 ├── node_modules
 └── src
-    ├── config
-    ├── pages
-    ├── testdata
-    └── tests
-├── playwright-report
-│   ├── .eslintrc.json
-│   ├── readme.md
-│   ├── .gitignore
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── playwright.config.ts
-│   ├── tsconfig.json
-├── .github
-│   └── workflows
-│       └── main.yml
+       ├── api
+       ├── config
+       ├── pages
+       ├── testdata
+       └── tests
+├─ playwright-report
+│ .eslintrc.json
+│ readme.md
+│ .gitignore
+│ package-lock.json
+│ package.json
+│ playwright.config.ts
+│ tsconfig.json
+├─ .github
+│        └── workflows
+│                 └── main.yml
 
-Folder and File Descriptions
+### Description
 
-Root Files:
+- .eslintrc.json: ESLint configuration file for linting TypeScript code.
+- .gitignore: Specifies intentionally untracked files to ignore in Git.
+- package-lock.json and package.json: Node.js package files specifying project dependencies.
+- playwright.config.ts: Configuration file for Playwright settings.
+- tsconfig.json: TypeScript compiler options file.
 
-.gitignore: Specifies files and directories that Git should ignore.
+### .github
 
-package-lock.json & package.json: Manage project dependencies and metadata.
+- .github/workflows/main.yml: GitHub Actions workflow file for continuous integration.
+  
+### node_modules
 
-playwright.config.ts: Configuration file for Playwright, including test settings.
+- Directory containing Node.js modules installed by npm.
+  
+### playwright-report
 
-tsconfig.json: TypeScript configuration file for compiler options.
+- Directory for storing Playwright test reports.
 
-Directories:
+### src
 
-node_modules: Stores Node.js modules installed via npm.
+- Source code directory containing project files.
 
-playwright-report: Contains Playwright-generated test reports.
+### api
 
-src: Contains core implementation files:
+- Directory for API-related scripts.
 
-config: Holds log files and environment-specific configurations.
+### config
 
-pages: Page Object Model (POM) files representing application pages.
+- Directory containing environment configuration files and authentication data.
 
-testdata: Stores test data in formats such as JSON and CSV.
+### fixtures
 
-tests: Houses the test scripts written in TypeScript.
+- Directory for test fixtures, such as reusable functions for login.
 
-utils: Utility functions, such as logging and encryption tools.
+### pages
 
-test-results: Stores test execution results, including screenshots, traces, and videos.
+- Page object files representing different pages of the application under test.
 
-.github/workflows: Contains CI/CD pipeline configurations with GitHub Actions.
+### testdata
 
-Getting Started
+-Directory containing test data files in various formats, such as JSON and CSV.
 
-Prerequisites
+### tests
 
-Node.js (v16 or higher)
+- Directory for test scripts written in TypeScript.
 
-npm (Node Package Manager)
+### utils
 
-Installation
+- Directory for utility scripts used in testing, such as encryption and logging utilities.
 
-Clone the repository:
+### test-results
 
-git clone <repository-url>
-cd <repository-name>
+- Directory for storing test execution results, including screenshots, trace files, and videos.
 
-Install dependencies:
+### Usage
 
-npm install
+- Clone the repository and install dependencies using npm install.
+- Run tests using npm test.
+- View test reports in the playwright-report directory.
+- Explore source code files for detailed implementation.
 
-Run tests:
+### Contributing
 
-npm test
+Contributions are welcome! Please follow the established coding style and guidelines. If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
 
-View test reports:
-Navigate to the playwright-report directory to access detailed test reports.
+### License
 
-Usage
-
-Test Scripts: Explore the src/tests folder for example test cases.
-
-Reports: Open playwright-report/index.html for interactive test results.
-
-Configuration: Modify playwright.config.ts to customize settings such as browser, viewport, and retries.
-
-Data Management: Add or modify test data in the src/testdata directory.
-
-Continuous Integration
-
-This project supports GitHub Actions for automated testing. The workflow is defined in .github/workflows/main.yml. Push your changes to the repository, and the tests will run automatically on every commit.
-
-Contributing
-
-We welcome contributions! To contribute:
-
-Fork the repository and create a new branch for your feature or bugfix.
-
-Follow the established coding style and guidelines.
-
-Submit a pull request with a detailed description of your changes.
-
-Found an Issue?
-
-If you encounter a bug or have suggestions, please open an issue in the repository. We appreciate your feedback!
-
-License
-
-This project is licensed under the MIT License. Feel free to use, modify, and distribute this project as per the license terms.
-
-Contact
-
-For further information or inquiries, reach out via the repository’s issues or discussions section.
+This project is licensed under the MIT License.
