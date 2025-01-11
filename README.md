@@ -20,10 +20,6 @@ Project Folder
        
 ├─ playwright-report
 
-│ .eslintrc.json
-
-│ readme.md
-
 │ .gitignore
 
 │ package-lock.json
