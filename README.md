@@ -14,21 +14,17 @@ Project Folder
        
        ├── pages
        
-       ├── testdata
-       
        └── tests
-       
-├─ playwright-report
 
 │ .gitignore
+
+├─ playwright-report
 
 │ package-lock.json
 
 │ package.json
 
 │ playwright.config.ts
-
-│ tsconfig.json
 
 ├─ .github
 
@@ -38,11 +34,9 @@ Project Folder
 
 ### Description
 
-- .eslintrc.json: ESLint configuration file for linting TypeScript code.
 - .gitignore: Specifies intentionally untracked files to ignore in Git.
 - package-lock.json and package.json: Node.js package files specifying project dependencies.
 - playwright.config.ts: Configuration file for Playwright settings.
-- tsconfig.json: TypeScript compiler options file.
 
 ### .github
 
@@ -67,10 +61,6 @@ Project Folder
 ### pages
 
 - Page object files representing different pages of the application under test.
-
-### testdata
-
--Directory containing test data files in various formats, such as JSON and CSV.
 
 ### tests
 
