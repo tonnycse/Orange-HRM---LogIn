@@ -18,7 +18,7 @@ Project Folder
 
 │ .gitignore
 
-├─ playwright-report
+       ├─ playwright-report
 
 │ package-lock.json
 
@@ -28,9 +28,9 @@ Project Folder
 
 ├─ .github
 
-│        └── workflows
+       └── workflows
 
-│                 └── main.yml
+              └── main.yml
 
 ### Description
 
